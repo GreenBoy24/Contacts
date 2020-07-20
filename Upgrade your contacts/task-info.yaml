@@ -215,6 +215,91 @@ files:
         }
     }
   learner_created: false
+- name: src/contacts/Contact.java
+  visible: true
+  text: |
+    package contacts;
+
+    import java.util.regex.Matcher;
+    import java.util.regex.Pattern;
+
+    public class Contact {
+
+        private String name;
+        private String surname;
+        private String number;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getSurname() {
+            return surname;
+        }
+
+        public void setSurname(String surname) {
+            this.surname = surname;
+        }
+
+        public Contact(String name, String surname, String number) {
+            this.name = name;
+            this.surname = surname;
+            this.number = number;
+        }
+
+        public String getNumber() {
+            return number;
+        }
+
+        public void setNumber(String number) {
+            this.number = number;
+        }
+
+        public static String hasNumber(String number){
+            String trueNumber;
+            Pattern pattern = Pattern.compile("^\\+?([\\da-zA-Z]{1,}[\\s-]?)?(\\([\\da-zA-Z]{2,}(\\)[\\s-]|\\)$))?([\\da-zA-Z]{2,}[\\s-]?)*([\\da-zA-Z]{2,})?$");
+            Matcher matcher = pattern.matcher(number);
+            if(matcher.matches()){
+                trueNumber = number;
+            } else{
+                System.out.println("Wrong number format!");
+                trueNumber = "[no number]";
+            }
+            return trueNumber;
+        }
+
+        @Override
+        public String toString() {
+            return name + " " + surname + ", " + number;
+        }
+    }
+  learner_created: true
+- name: src/contacts/ContactBuilder.java
+  visible: true
+  learner_created: true
+- name: src/contacts/Builder.java
+  visible: true
+  learner_created: true
+- name: src/contacts/ContactOfOrganization.java
+  visible: true
+  learner_created: true
+- name: src/contacts/ContactOfPerson.java
+  visible: true
+  learner_created: true
+- name: src/contacts/Contacts.java
+  visible: true
+  learner_created: true
+- name: src/contacts/OtherCommands.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/43/stages/230/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/43/stages/230/implement">JetBrains
+    Academy</a>
+  time: Sun, 19 Jul 2020 13:41:53 UTC
+record: 3

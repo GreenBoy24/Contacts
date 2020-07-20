@@ -1,8 +1,8 @@
 <h2 style="text-align: center;">Description</h2>
 
-<p>Our temporary solution in the previous stage was bad because of every time you want to interact with concrete classes you must check the Boolean field then apply different code according to the concrete class. So far so good, you implement this behavior every time you need to. However, in a larger application, there can be 100 places or more where you must  do this. And at the end of the day, a new feature request might come in: implement a third type of records, something that represents an automated system with robots serving the calls. You would be very annoyed that you were forced to find all the places where you interact with concrete classes.</p>
+<p>Our temporary solution in the previous stage was bad because of every time you want to interact with concrete classes you must check the Boolean field then apply different code according to the concrete class. So far so good, you implement this behavior every time you need to. However, in a larger application, there can be 100 places or more where you must  do this. And at the end of the day, a new feature request might come in: implement a third type of records, something that represents an automated system with robots serving the calls. You would be very annoyed that you were forced to find all the places where you interact with concrete classes.</p>
 
-<p>The solution to this problem is a <strong>polymorphism</strong>.</p>
+<p>The solution to this problem is a <strong>polymorphism</strong>.</p>
 
 <p>Basically, you need to implement the functionality in one place inside a concrete class. All of the derived classes should implement this method, and in the base class, there should be an abstract method. In the code, you actually call this abstract method and get different code executions in the derived classes.</p>
 
@@ -24,7 +24,7 @@
 
 <h2 style="text-align: center;">Output example</h2>
 
-<p>Below is an example of how your output might look. The symbol <code>&gt;</code> represents the user input.</p>
+<p>Below is an example of how your output might look. The symbol <code class="java">&gt;</code> represents the user input.</p>
 
 <pre><code class="language-no-highlight">open phonebook.db
 
@@ -104,4 +104,4 @@ Time last edit: 2018-11-20T11:07
 [menu] Enter action (add, list, search, count, exit): &gt; exit
 </code></pre>
 
-<p> </p>
+<p> </p>

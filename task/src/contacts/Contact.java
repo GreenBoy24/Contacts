@@ -1,13 +1,19 @@
 package contacts;
 
+import java.time.LocalDateTime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Contact {
-
+abstract class Contact {
     private String name;
-    private String surname;
     private String number;
+    private LocalDateTime timeAdded;
+    private LocalDateTime timeEdited;
+    Contacts contacts;
+
+    Contact(Contacts contacts){
+        this.contacts = contacts;
+    }
 
     public String getName() {
         return name;
@@ -17,26 +23,29 @@ public class Contact {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public Contact(String name, String surname, String number) {
-        this.name = name;
-        this.surname = surname;
-        this.number = number;
-    }
-
     public String getNumber() {
         return number;
     }
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    void setTimeAdded() {
+        timeAdded = LocalDateTime.now();
+        timeEdited = LocalDateTime.now();
+    }
+
+    void setTimeEdited() {
+        timeEdited = LocalDateTime.now();
+    }
+
+    LocalDateTime getTimeAdded() {
+        return timeAdded;
+    }
+
+    LocalDateTime getTimeEdited() {
+        return timeEdited;
     }
 
     public static String hasNumber(String number){
@@ -52,8 +61,8 @@ public class Contact {
         return trueNumber;
     }
 
-    @Override
-    public String toString() {
-        return name + " " + surname + ", " + number;
-    }
+    abstract void add();
+    abstract void print();
+    abstract String fullName();
+    abstract void setField(String field);
 }
