@@ -1,5 +1,14 @@
-Create a menu\
-First contact\
-Searching\
-Upgrade your contacts\
+# Ignore the Create a menu directory
+Create a menu/
+
+# Ignore the First contact directory
+First contact/
+
+# Ignore the Searching directory
+Searching/
+
+# Ignore the Upgrade your contacts directory
+Upgrade your contacts/
+
+# The file containing yaml variables 
 *.yaml
