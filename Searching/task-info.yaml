@@ -198,6 +198,19 @@ files:
         }
     }
   learner_created: false
+- name: src/contacts/ListCommand.java
+  visible: true
+  learner_created: true
+- name: src/contacts/SearchCommand.java
+  visible: true
+  learner_created: true
+- name: data.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/43/stages/231/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/43/stages/231/implement">JetBrains
+    Academy</a>
+  time: Tue, 21 Jul 2020 15:03:44 UTC
 record: -1

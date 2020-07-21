@@ -6,6 +6,7 @@ public class AddContactCommand implements Command {
     AddContactCommand(Contacts contacts){
         this.contacts = contacts;
     }
+
     @Override
     public void execute() {
         System.out.print("Enter the type (person, organization): ");

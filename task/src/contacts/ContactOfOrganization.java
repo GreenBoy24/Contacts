@@ -1,8 +1,8 @@
 package contacts;
 
-import java.util.Scanner;
+import java.io.Serializable;
 
-public class ContactOfOrganization extends Contact{
+public class ContactOfOrganization extends Contact implements Serializable {
     private String address;
 
     ContactOfOrganization(Contacts contacts) {
@@ -36,20 +36,21 @@ public class ContactOfOrganization extends Contact{
     }
 
     @Override
-    void setField(String field) {
-        Scanner scanner = new Scanner(System.in);
+    void setField() {
+        System.out.println("Select a field (name, address, number): ");
+        String field = contacts.scanner.nextLine();
         switch (field) {
             case "name":
-                System.out.println("Enter the organization name: ");
-                setName(scanner.nextLine());
+                System.out.println("Enter name: ");
+                setName(contacts.scanner.nextLine());
                 break;
             case "address":
                 System.out.println("Enter the address: ");
-                address = scanner.nextLine();
+                address = contacts.scanner.nextLine();
                 break;
             case "number":
                 System.out.println("Enter the number: ");
-                setNumber(hasNumber(scanner.nextLine()));
+                setNumber(hasNumber(contacts.scanner.nextLine()));
                 break;
         }
 

@@ -1,9 +1,9 @@
 package contacts;
 
+import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Scanner;
 
-public class ContactOfPerson extends Contact {
+public class ContactOfPerson extends Contact implements Serializable {
     private String surname;
     private String gender;
     private LocalDate birthDate;
@@ -29,28 +29,29 @@ public class ContactOfPerson extends Contact {
     }
 
     @Override
-    void setField(String field) {
-        Scanner scanner = new Scanner(System.in);
+    void setField() {
+        System.out.println("Select a field (name, address, number): ");
+        String field = contacts.scanner.nextLine();
         switch (field) {
             case "name":
                 System.out.print("Enter the name: ");
-                setName(scanner.nextLine());
+                setName(contacts.scanner.nextLine());
                 break;
             case "surname":
                 System.out.print("Enter the surname: ");
-                surname = scanner.nextLine();
+                surname = contacts.scanner.nextLine();
                 break;
             case "number":
                 System.out.print("Enter the number: ");
-                setNumber(hasNumber(scanner.nextLine()));
+                setNumber(hasNumber(contacts.scanner.nextLine()));
                 break;
             case "gender":
                 System.out.print("Enter the gender (M, F): ");
-                gender(scanner.nextLine());
+                gender(contacts.scanner.nextLine());
                 break;
             case "birth":
                 System.out.print("Enter the birth date: ");
-                validateBirthDate(scanner.nextLine());
+                validateBirthDate(contacts.scanner.nextLine());
         }
         setTimeEdited();
     }

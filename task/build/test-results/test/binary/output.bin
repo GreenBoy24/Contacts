@@ -1,41 +1,19 @@
 [1;31m
 Start test 1[0m
-
-5Enter action (add, remove, edit, count, info, exit): > exit
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > exit
 [1;31m
 Start test 2[0m
-
-5Enter action (add, remove, edit, count, info, exit): > count
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > count
 The phone book has 0
  records.
-
-5Enter action (add, remove, edit, count, info, exit): > exit
+6[menu] Enter action (add, list, search, count, exit): > exit
 [1;31m
 Start test 3[0m
-
-5Enter action (add, remove, edit, count, info, exit): > count
-The phone book has 0
- records.
-
-5Enter action (add, remove, edit, count, info, exit): > edit
-No records to edit!
-
-5Enter action (add, remove, edit, count, info, exit): > exit
-[1;31m
-Start test 4[0m
-
-5Enter action (add, remove, edit, count, info, exit): > count
-The phone book has 0
- records.
-
-5Enter action (add, remove, edit, count, info, exit): 	> remove
-No records to remove!
-
-5Enter action (add, remove, edit, count, info, exit): > exit
-[1;31m
-Start test 5[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
 'Enter the type (person, organization): 	> person
 Enter the name: > John
 Enter the surname: > Smith
@@ -46,16 +24,15 @@
 Enter the number: > 123 456 789
 The record added.
 
-
-5Enter action (add, remove, edit, count, info, exit): > count
+6[menu] Enter action (add, list, search, count, exit): > count
 The phone book has 1
  records.
-
-5Enter action (add, remove, edit, count, info, exit): > exit
+6[menu] Enter action (add, list, search, count, exit): > exit
 [1;31m
-Start test 6[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
+Start test 4[0m
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
 'Enter the type (person, organization): 	> person
 Enter the name: > John
 Enter the surname: > Smith
@@ -66,48 +43,50 @@
 Enter the number: > 123 456 789
 The record added.
 
-
-5Enter action (add, remove, edit, count, info, exit): > info
+6[menu] Enter action (add, list, search, count, exit): > list
 1. John Smith
-Enter index to show info:> 1
+
+&[list] Enter action ([number], back): > 1
 Name: John
 	Surname: Smith
 Birth date: 	[no data]
 Gender: 	[no data]
 Number: 123 456 789
-Time created: 2020-07-19T20:41:51.594987200
-Time last edit: 2020-07-19T20:41:51.594987200
+Time created: 2020-07-21T22:03:42.481489900
+Time last edit: 2020-07-21T22:03:42.481489900
 
-
-5Enter action (add, remove, edit, count, info, exit): > exit
+,[record] Enter action (edit, delete, menu): > menu
+6[menu] Enter action (add, list, search, count, exit): > exit
 [1;31m
-Start test 7[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
+Start test 5[0m
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
 'Enter the type (person, organization): > organization
 Enter the organization name: > Pizza Shop
 Enter the address: > Wall St. 1
 Enter the number: > +0 (123) 456-789-9999
 The record added.
 
-
-5Enter action (add, remove, edit, count, info, exit): > info
+6[menu] Enter action (add, list, search, count, exit): > list
 1. Pizza Shop
-Enter index to show info:> 1
+
+&[list] Enter action ([number], back): > 1
 Organization name: 
 Pizza Shop
 	Address: 
 Wall St. 1
 Number: +0 (123) 456-789-9999
-Time created: 2020-07-19T20:41:51.685992400
-Time last edit: 2020-07-19T20:41:51.685992400
+Time created: 2020-07-21T22:03:42.578495500
+Time last edit: 2020-07-21T22:03:42.578495500
 
-
-5Enter action (add, remove, edit, count, info, exit): > exit
+,[record] Enter action (edit, delete, menu): > menu
+6[menu] Enter action (add, list, search, count, exit): > exit
 [1;31m
-Start test 8[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
+Start test 6[0m
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
 'Enter the type (person, organization): 	> person
 Enter the name: > John
 Enter the surname: > Smith
@@ -118,168 +97,233 @@ Wall St. 1
 Enter the number: > 123 456 789
 The record added.
 
-
-5Enter action (add, remove, edit, count, info, exit): > edit
+6[menu] Enter action (add, list, search, count, exit): > list
 1. John Smith
-Select a record:> 1
-6Select a field (name, surname, birth, gender, number):
+
+&[list] Enter action ([number], back): > 1
+Name: John
+	Surname: Smith
+Birth date: 	[no data]
+Gender: 	[no data]
+Number: 123 456 789
+Time created: 2020-07-21T22:03:42.628498400
+Time last edit: 2020-07-21T22:03:42.628498400
+
+,[record] Enter action (edit, delete, menu): > edit
+(Select a field (name, address, number): 
 	> gender
 Enter the gender (M, F): > M
-The record updated!
+Saved
 
-
-5Enter action (add, remove, edit, count, info, exit): > info
-1. John Smith
-Enter index to show info:> 1
 Name: John
 	Surname: Smith
 Birth date: 	[no data]
 Gender: M
 Number: 123 456 789
-Time created: 2020-07-19T20:41:51.741995600
-Time last edit: 2020-07-19T20:41:51.749996100
+Time created: 2020-07-21T22:03:42.628498400
+Time last edit: 2020-07-21T22:03:42.641499100
+> menu
+6[menu] Enter action (add, list, search, count, exit): > list
+1. John Smith
 
-
-5Enter action (add, remove, edit, count, info, exit): > exit
-[1;31m
-Start test 9[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
-'Enter the type (person, organization): 	> person
-Enter the name: > John2
-Enter the surname: 	> Smith2
-Enter the birth date: > 
-Bad birth date!
-Enter the gender (M, F): > 
-Bad gender!
-Enter the number: > 123 456 789
-The record added.
-
-
-5Enter action (add, remove, edit, count, info, exit): > edit
-1. John2 Smith2
-Select a record:> 1
-6Select a field (name, surname, birth, gender, number):
-> name
-Enter the name: > John3
-The record updated!
-
-
-5Enter action (add, remove, edit, count, info, exit): > info
-1. John3 Smith2
-Enter index to show info:> 1
-Name: John3
-	Surname: Smith2
+&[list] Enter action ([number], back): > 1
+Name: John
+	Surname: Smith
 Birth date: 	[no data]
-Gender: 	[no data]
+Gender: M
 Number: 123 456 789
-Time created: 2020-07-19T20:41:51.782998
-Time last edit: 2020-07-19T20:41:51.789998400
+Time created: 2020-07-21T22:03:42.628498400
+Time last edit: 2020-07-21T22:03:42.641499100
 
-
-5Enter action (add, remove, edit, count, info, exit): > exit
+,[record] Enter action (edit, delete, menu): > menu
+6[menu] Enter action (add, list, search, count, exit): > exit
 [1;31m
-Start test 10[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
-'Enter the type (person, organization): 	> person
-Enter the name: > John2
-Enter the surname: 	> Smith2
-Enter the birth date: > 
-Bad birth date!
-Enter the gender (M, F): > 
-Bad gender!
-Enter the number: > 123 456 789
-The record added.
-
-
-5Enter action (add, remove, edit, count, info, exit): > edit
-1. John2 Smith2
-Select a record:> 1
-6Select a field (name, surname, birth, gender, number):
-	> number
-Enter the number: > 321 654 978
-The record updated!
-
-
-5Enter action (add, remove, edit, count, info, exit): > info
-1. John2 Smith2
-Enter index to show info:> 1
-Name: John2
-	Surname: Smith2
-Birth date: 	[no data]
-Gender: 	[no data]
-Number: 321 654 978
-Time created: 2020-07-19T20:41:51.914005400
-Time last edit: 2020-07-19T20:41:51.928006200
-
-
-5Enter action (add, remove, edit, count, info, exit): > exit
-[1;31m
-Start test 11[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
+Start test 7[0m
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
 'Enter the type (person, organization): > organization
 Enter the organization name: > Pizza Shop
 Enter the address: > Wall St. 1
 Enter the number: > +0 (123) 456-789-9999
 The record added.
 
-
-5Enter action (add, remove, edit, count, info, exit): > edit
+6[menu] Enter action (add, list, search, count, exit): > list
 1. Pizza Shop
-Select a record:> 1
-6Select a field (name, surname, birth, gender, number):
-
-> address
-Enter the address: 
-> Wall St 2
-The record updated!
 
-
-5Enter action (add, remove, edit, count, info, exit): > info
-1. Pizza Shop
-Enter index to show info:> 1
-Organization name: 
-Pizza Shop
-	Address: 	Wall St 2
-Number: +0 (123) 456-789-9999
-Time created: 2020-07-19T20:41:51.976009
-Time last edit: 2020-07-19T20:41:51.982009300
-
-
-5Enter action (add, remove, edit, count, info, exit): > exit
-[1;31m
-Start test 12[0m
-
-5Enter action (add, remove, edit, count, info, exit): > add
-'Enter the type (person, organization): > organization
-Enter the organization name: > Pizza Shop
-Enter the address: > Wall St. 1
-Enter the number: > +0 (123) 456-789-9999
-The record added.
-
-
-5Enter action (add, remove, edit, count, info, exit): > edit
-1. Pizza Shop
-Select a record:> 1
-6Select a field (name, surname, birth, gender, number):
-	> number
-Enter the number: 
-> +0 (123) 456-789-12345
-The record updated!
-
-
-5Enter action (add, remove, edit, count, info, exit): > info
-1. Pizza Shop
-Enter index to show info:> 1
+&[list] Enter action ([number], back): > 1
 Organization name: 
 Pizza Shop
 	Address: 
 Wall St. 1
-Number: +0 (123) 456-789-12345
-Time created: 2020-07-19T20:41:52.017011300
-Time last edit: 2020-07-19T20:41:52.027011900
+Number: +0 (123) 456-789-9999
+Time created: 2020-07-21T22:03:42.686501700
+Time last edit: 2020-07-21T22:03:42.686501700
 
+,[record] Enter action (edit, delete, menu): > edit
+(Select a field (name, address, number): 
+
+> address
+Enter the address: 
+> Wall St 2
+Saved
 
-5Enter action (add, remove, edit, count, info, exit): > exit
+Organization name: 
+Pizza Shop
+	Address: 	Wall St 2
+Number: +0 (123) 456-789-9999
+Time created: 2020-07-21T22:03:42.686501700
+Time last edit: 2020-07-21T22:03:42.697502300
+> menu
+6[menu] Enter action (add, list, search, count, exit): > list
+1. Pizza Shop
+
+&[list] Enter action ([number], back): > 1
+Organization name: 
+Pizza Shop
+	Address: 	Wall St 2
+Number: +0 (123) 456-789-9999
+Time created: 2020-07-21T22:03:42.686501700
+Time last edit: 2020-07-21T22:03:42.697502300
+
+,[record] Enter action (edit, delete, menu): > menu
+6[menu] Enter action (add, list, search, count, exit): > exit
+[1;31m
+Start test 8[0m
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): > organization
+Enter the organization name: > Pizza Shop
+Enter the address: > Wall St. 1
+Enter the number: > +0 (123) 456-789-9999
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): 	> person
+Enter the name: > John
+Enter the surname: > Smith
+Enter the birth date: > 
+Bad birth date!
+Enter the gender (M, F): > 
+Bad gender!
+Enter the number: > 123 456 789
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): > organization
+Enter the organization name: > PizzaNuts
+Enter the address: > Wall St. 6
+Enter the number: > +0 (123) 456-789-9999
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): 	> search
+Enter search query:
+> pizz
+Found 2 results
+1 Pizza Shop
+2 PizzaNuts
+/[search] Enter action ([number], back, again): > 1
+Organization name: 
+Pizza Shop
+	Address: 
+Wall St. 1
+Number: +0 (123) 456-789-9999
+Time created: 2020-07-21T22:03:42.736504500
+Time last edit: 2020-07-21T22:03:42.736504500
+
+,[record] Enter action (edit, delete, menu): > menu
+6[menu] Enter action (add, list, search, count, exit): > exit
+[1;31m
+Start test 9[0m
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): > organization
+Enter the organization name: > Pizza Shop
+Enter the address: > Wall St. 1
+Enter the number: > +0 (123) 456-789-9999
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): 	> person
+Enter the name: > John
+Enter the surname: > Smith
+Enter the birth date: > 
+Bad birth date!
+Enter the gender (M, F): > 
+Bad gender!
+Enter the number: > 123 456 789
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): > organization
+Enter the organization name: > PizzaNuts
+Enter the address: > Wall St. 6
+Enter the number: > +0 (123) 456-789-9999
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): 	> search
+Enter search query:
+> s
+Found 3 results
+1 Pizza Shop
+2 John Smith
+3 PizzaNuts
+/[search] Enter action ([number], back, again): > 1
+Name: John
+	Surname: Smith
+Birth date: 	[no data]
+Gender: 	[no data]
+Number: 123 456 789
+Time created: 2020-07-21T22:03:42.883512900
+Time last edit: 2020-07-21T22:03:42.883512900
+
+,[record] Enter action (edit, delete, menu): > menu
+6[menu] Enter action (add, list, search, count, exit): > exit
+[1;31m
+Start test 10[0m
+Contacts file is not found
+open phonebook.db
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): > organization
+Enter the organization name: > Pizza Shop
+Enter the address: > Wall St. 1
+Enter the number: > +0 (123) 456-789-9999
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): 	> person
+Enter the name: > John
+Enter the surname: > Smith
+Enter the birth date: > 
+Bad birth date!
+Enter the gender (M, F): > 
+Bad gender!
+Enter the number: > 123 456 789
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): > add
+'Enter the type (person, organization): > organization
+Enter the organization name: > PizzaNuts
+Enter the address: > Wall St. 6
+Enter the number: > +0 (123) 456-781-9999
+The record added.
+
+6[menu] Enter action (add, list, search, count, exit): 	> search
+Enter search query:
+> 789
+Found 2 results
+1 Pizza Shop
+2 John Smith
+/[search] Enter action ([number], back, again): > 1
+Name: John
+	Surname: Smith
+Birth date: 	[no data]
+Gender: 	[no data]
+Number: 123 456 789
+Time created: 2020-07-21T22:03:42.955517100
+Time last edit: 2020-07-21T22:03:42.955517100
+
+,[record] Enter action (edit, delete, menu): > menu
+6[menu] Enter action (add, list, search, count, exit): > exit

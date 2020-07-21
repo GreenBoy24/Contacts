@@ -64,5 +64,5 @@ abstract class Contact {
     abstract void add();
     abstract void print();
     abstract String fullName();
-    abstract void setField(String field);
+    abstract void setField();
 }

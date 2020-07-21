@@ -1,83 +1,46 @@
 package contacts;
 
-import java.util.Scanner;
+class OtherCommands {
+    public Contacts contacts;
 
-public class OtherCommands implements Command{
-    private Contacts contacts;
-    private int choice;
-
-    public int getChoice() {
-        return choice;
-    }
-
-    public void setChoice(int choice) {
-        this.choice = choice;
-    }
-
-    OtherCommands(Contacts contacts, int  choice){
+    OtherCommands(Contacts contacts){
         this.contacts = contacts;
-        this.choice = choice;
     }
 
-    @Override
-    public void execute() {
-        if(getChoice() == 1) {
-            remove();
-        }
-        if(getChoice() == 2){
-            edit();
-        }
-        if(getChoice() == 3) {
-            info();
-        }
+    public void remove(int record) {
+        contacts.contacts.remove(record);
+        System.out.println("The record removed!\n");
     }
 
-    private void remove() {
-        Scanner scanner = new Scanner(System.in);
-        if(!contacts.contacts.isEmpty()){
-            for (int i = 0; i < contacts.contacts.size(); i++) {
-                System.out.println(i + 1 + ". " + contacts.contacts.get(i).fullName());
+    public void edit(int record){
+        contacts.contacts.get(record-1).setField();
+        System.out.println("Saved\n");
+        contacts.contacts.get(record-1).print();
+    }
+
+    public void recordOperations(int record){
+        contacts.contacts.get(record-1).print();
+        System.out.println();
+        System.out.print("[record] Enter action (edit, delete, menu): ");
+        String action;
+        recordMenu:
+        {
+            while (true) {
+                action = contacts.scanner.nextLine();
+                switch (action) {
+                    case "edit":
+                        edit(record);
+                        break;
+                    case "delete":
+                        remove(record);
+                        break;
+                    case "menu":
+                        break recordMenu;
+                    default:
+                        System.out.println("Wrong action");
+                        break;
+                }
             }
-            System.out.println("Select a record:");
-            int record = Integer.parseInt(scanner.nextLine());
-            contacts.contacts.remove(record-1);
-            System.out.println("The record removed!");
-            System.out.println();
-        } else{
-            System.out.println("No records to remove!");
-        }
-    }
-
-    private void edit(){
-        Scanner scanner = new Scanner(System.in);
-        if(!contacts.contacts.isEmpty()){
-            for (int i = 0; i < contacts.contacts.size(); i++) {
-                System.out.println(i + 1 + ". " + contacts.contacts.get(i).fullName());
-            }
-            System.out.print("Select a record:");
-            int record = Integer.parseInt(scanner.nextLine());
-            System.out.println("Select a field (name, surname, birth, gender, number):");
-            String field = scanner.nextLine();
-            contacts.contacts.get(record-1).setField(field);
-            System.out.println("The record updated!");
-            System.out.println();
-        } else{
-            System.out.println("No records to edit!");
-        }
-    }
-
-    private void info(){
-        Scanner scanner = new Scanner(System.in);
-        if(!contacts.contacts.isEmpty()){
-            for (int i = 0; i < contacts.contacts.size(); i++) {
-                System.out.println(i + 1 + ". " + contacts.contacts.get(i).fullName());
-            }
-            System.out.print("Enter index to show info:");
-            int record = Integer.parseInt(scanner.nextLine());
-            contacts.contacts.get(record-1).print();
-            System.out.println();
-        } else{
-            System.out.println("No records.");
         }
     }
 }
