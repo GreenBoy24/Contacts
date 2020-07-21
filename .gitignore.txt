@@ -12,3 +12,6 @@ Upgrade your contacts/
 
 # The file containing yaml variables 
 *.yaml
+
+# Ignore the test directory
+task/build/tmp/test
